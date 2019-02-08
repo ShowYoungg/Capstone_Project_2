@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/expenses_slide2"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.soyinka.soyombo.inventorymanagement.PayablesAndReceivablesActivity">
+
+
+    <TextView
+        android:id="@+id/account_payables_receivables_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/account_receivable_title"
+        android:layout_margin="8dp"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary" />
+
+    <include layout="@layout/search_bar"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/account_payables_receivables"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_margin="8dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_gravity="center_horizontal"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2081307953269103/8889566083" />
+
+
+</LinearLayout>

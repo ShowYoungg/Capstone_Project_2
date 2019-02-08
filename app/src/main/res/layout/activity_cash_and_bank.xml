@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="com.soyinka.soyombo.inventorymanagement.CashAndBankActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_slide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="2.15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:layout_weight="0.15"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/start_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:hint="@string/from_mm_dd_yyyy"
+                android:inputType="date"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/end_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="2"
+                android:hint="@string/to_mm_dd_yyyy"
+                android:inputType="date"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/send_for_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:text="Search"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="4"
+                android:text="@string/cashbook_title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/add_cash_bank"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:text="add"
+                android:textColor="@color/colorPrimary" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/cash_bank_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cash_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/bank_statement_title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
+
+            <include layout="@layout/cash_bank_content" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/cash_recycler2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

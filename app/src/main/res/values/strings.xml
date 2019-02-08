@@ -1,0 +1,101 @@
+<resources>
+    <string name="app_name">Inventory Management</string>
+    <string name="title_activity_inventory_management">InventoryManagementActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="enter_product_name_here">Enter product name here</string>
+    <string name="enter_product_code">Enter product code</string>
+    <string name="product_description">Product description</string>
+    <string name="image_content_description">product picture</string>
+    <string name="save_button">SAVE</string>
+    <string name="tap_to_snap">Tap to snap</string>
+    <string name="product_image">Product Image</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cash">Cash</string>
+    <string name="credit">Credit</string>
+    <string name="incoming_stock">Incoming Stock/Purchase</string>
+    <string name="outgoing_stock">Outgoing Stock/Sales</string>
+    <string name="supplier_s_name">Supplier/Product i.e ABC Ltd/Rice</string>
+    <string name="quantity">Quantity/Unit</string>
+    <string name="cost_price">Cost Price/Unit</string>
+    <string name="sale_price">Sales Price/Unit</string>
+    <string name="add_and_save">Add AND SAVE</string>
+    <string name="total_stock">In-Store :</string>
+    <string name="incoming">Incoming:</string>
+    <string name="sales_out">Outgoing:</string>
+    <string name="dd_mm_yyyy">dd/mm/yyyy</string>
+    <string name="inventory_record_and_history">Inventory Record and History</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="product_name">Product Name</string>
+    <string name="price_list">Price List</string>
+    <string name="history_and_records">History And Records</string>
+    <string name="search_name">Search by name</string>
+    <string name="confirm_total_price">Check Amount</string>
+    <string name="discount">Discount</string>
+    <string name="product_name1">Product Name</string>
+    <string name="cashbook_title">Cashbook</string>
+    <string name="bank_statement_title">Bank Account</string>
+    <string name="date">Date</string>
+    <string name="description">Description</string>
+    <string name="dr">DR</string>
+    <string name="cr">CR</string>
+    <string name="purchase_journal_title">Purchase Journal/Record</string>
+    <string name="sales_journal_title">Sales Journal/Record</string>
+    <string name="product_transaction">Product Transaction</string>
+    <string name="cashbook_bank_title">Cashbook and Bank</string>
+    <string name="account_receivable_title">Account Receivables</string>
+    <string name="view_by_category">View by Category</string>
+    <string name="view_all">View All</string>
+    <string name="from_mm_dd_yyyy">From: MM/dd/yyyy</string>
+    <string name="to_mm_dd_yyyy">To: MM/dd/yyyy</string>
+    <string name="date_enter">Date</string>
+    <string name="amount_cash_bank">Amount</string>
+    <string name="payment">Payment</string>
+    <string name="collection">Collection</string>
+    <string name="m_d_yy">m/d/yy</string>
+    <string name="add_transaction">ADD TRANSACTION</string>
+    <string name="nature_of_the_expenses">Nature of the Expenses</string>
+    <string name="explanation_of_expenses">Cost of Sales are expenses directly related or traceable to the purchase
+        of the goods or service ex. VAT paid, cost of delivery from supplier, while Expenses are those expenses that
+        are related to sales of the goods and operation of the entity ex delivery to buyer, Sales Tax, salary and rent etc</string>
+    <string name="add_expenses">ADD EXPENSES</string>
+    <string name="search">Search</string>
+    <string name="mm_dd_yyyy">MM/dd/yyyy</string>
+    <string name="two_months">Two Months</string>
+    <string name="recent">Recent</string>
+    <string name="all">All</string>
+    <string name="opening_stock_message">Do you have some stock in store last year? Please note that closing stock last year is equivalent to opening stock this year, please input amount</string>
+    <string name="input_opening_stock">Input opening stock</string>
+    <string name="get_stock">Get Stock</string>
+    <string name="add_sales_expenses">Sales Expenses</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="transition_name">transit</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="amp_expenses"><![CDATA[& Expenses]]></string>
+    <string name="cost_of_sales">Cost of Sales</string>
+    <string name="amp"><![CDATA[&]]></string>
+    <string name="bank_account">Bank Account</string>
+    <string name="cashbook">Cashbook</string>
+    <string name="management">Management</string>
+    <string name="inventory">Inventory</string>
+    <string name="register_a_name_or_email">Register a name or email</string>
+    <string name="register">Please register or sign-in with a name or email for security of your data</string>
+    <string name="register_or_sign_in">Register or sign in</string>
+    <string name="sign_in_sign_up">Sign-in/Sign-up</string>
+    <string name="inventory_management">Inventory Management</string>
+    <string name="set_re_order_quantity">Set Re-order quantity</string>
+    <string name="replenishment_notice">Stock is about to get empty, replenish now</string>
+    <string name="bank">Bank</string>
+    <string name="loading">Loading</string>
+
+</resources>

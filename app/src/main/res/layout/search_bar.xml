@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:background="@drawable/border"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/two_month"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:text="@string/two_months"
+        android:textColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/recent"
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:text="@string/recent"
+        android:textColor="@color/colorPrimary"/>
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:text="@string/all"
+        android:textColor="@color/colorPrimary"/>
+
+</LinearLayout>

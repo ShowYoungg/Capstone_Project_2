@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/product_category_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="true"
+        android:elevation="6dp"
+        android:focusableInTouchMode="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:scaleType="centerCrop"
+                android:background="@android:color/darker_gray"
+                android:contentDescription="@string/image_content_description" />
+
+            <TextView
+                android:id="@+id/tap_to_snap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tap_to_snap"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:padding="16dp"
+            android:hint="@string/enter_product_name_here"
+            android:background="@drawable/border"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/reorder_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/set_re_order_quantity"
+            android:inputType="number"
+            android:background="@drawable/border"
+            android:padding="16dp"
+            android:textSize="20sp"/>
+
+
+        <EditText
+            android:id="@+id/product_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:hint="@string/enter_product_code"
+            android:background="@drawable/border"
+            android:padding="16dp"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/product_description"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:hint="@string/product_description"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:background="@drawable/border"
+            android:padding="16dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save_button"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/border"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+</ScrollView>

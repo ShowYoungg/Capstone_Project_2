@@ -1,0 +1,302 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.soyinka.soyombo.inventorymanagement.ProductTransactionFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="11">
+
+        <!-- TODO: Update blank fragment layout -->
+        <RelativeLayout
+            android:id="@+id/frag_slide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:background="@drawable/border"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/office"
+                android:contentDescription="@string/image_content_description"/>
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/product_image"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:hint="@string/dd_mm_yyyy"
+                android:inputType="date"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/cash_credit_spinner"
+                style="@style/Base.Widget.AppCompat.Spinner"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/product_image"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:minHeight="30dp"
+                android:textColor="@color/colorPrimary"
+                android:spinnerMode="dropdown" />
+
+            <RadioGroup
+                android:id="@+id/radioButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/cash_credit_spinner"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioButton1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/incoming_stock"
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/border"
+                    android:padding="8dp"
+                    android:textColor="@color/colorPrimary"
+                    android:text="@string/outgoing_stock"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/supplier"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioButtons"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:hint="@string/supplier_s_name"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/q_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/supplier"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/quantity"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/addition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:layout_marginStart="20dp"
+                    android:minWidth="70dp"
+                    android:background="@drawable/border"
+                    android:text="+"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/quantity_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:hint="0"
+                    android:ellipsize="middle"
+                    android:inputType="number"
+                    android:minHeight="50dp"
+                    android:minWidth="50dp"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/subtraction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:minWidth="70dp"
+                    android:background="@drawable/border"
+                    android:text="-"
+                    android:textSize="20sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/c_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/q_linear_layout"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/cost_price_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1.5"
+                    android:text="@string/cost_price"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/cost_price"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:minWidth="70dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/s_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/c_linear_layout"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sales_price_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/sale_price"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/sales_price"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:minWidth="70dp"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/d_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/s_linear_layout"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/discount_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/discount"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/discount"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:minWidth="70dp"/>
+
+                <Button
+                    android:id="@+id/total_price_title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/confirm_total_price"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/border"/>
+
+                <EditText
+                    android:id="@+id/total_price"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:inputType="number"
+                    android:textSize="20sp"
+                    android:minWidth="70dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/save_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:text="@string/add_and_save"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

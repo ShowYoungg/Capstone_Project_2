@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.soyinka.soyombo.inventorymanagement">
+
+    <uses-sdk tools:overrideLibrary="com.firebase.ui.auth" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".InventoryManagementActivity"
+            android:label="@string/title_activity_inventory_management"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:launchMode="singleTop">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".ProductTransactionActivity"
+            android:label="@string/product_transaction"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+        <activity
+            android:name=".Main2Activity"
+            android:label="@string/history_and_records"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+        <activity
+            android:name=".PriceListActivity"
+            android:label="@string/price_list"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+        <activity
+            android:name=".CashAndBankActivity"
+            android:label="@string/cashbook_bank_title"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+        <activity
+            android:name=".PurchasesJournal"
+            android:label="@string/purchase_journal_title"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+        <activity
+            android:name=".SalesJournal"
+            android:label="@string/sales_journal_title"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+        <activity android:name=".PayablesAndReceivablesActivity"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+        <activity
+            android:name=".AddCashBankActivity"
+            android:label="Cash and Bank"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CashAndBankActivity" />
+        </activity>
+        <activity
+            android:name=".SalesCostAndExpensesActivity"
+            android:label="Add Expenses"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ExpensesListActivity" />
+        </activity>
+        <activity
+            android:name=".ExpensesListActivity"
+            android:label="List of Expenses"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+        <activity
+            android:name=".ProfitAndLossActivity"
+            android:label="Profit and Loss Account"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InventoryManagementActivity" />
+        </activity>
+
+        <receiver android:name=".InventorySummaryWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/inventory_summary_widget_info" />
+        </receiver>
+
+        <service android:name=".InventoryService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false" />
+
+        <service android:name=".StackRemoteViewsService"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:exported="false" />
+    </application>
+
+</manifest>

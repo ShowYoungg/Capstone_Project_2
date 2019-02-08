@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="com.soyinka.soyombo.inventorymanagement.AddCashBankActivity">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-2081307953269103/8889566083" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_margin="8dp"
+        android:background="@drawable/border"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/date_enter"
+                android:background="@drawable/border"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/date_field"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="@string/mm_dd_yyyy"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/d1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:background="@drawable/border"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/description_field"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="text"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/d2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/amount_cash_bank"
+                android:background="@drawable/border"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/amoumt_field"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/bank"
+                android:textSize="20sp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/colorPrimary"/>
+
+            <RadioButton
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="@string/cash"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/border"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:text="@string/payment"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"/>
+
+            <RadioButton
+                android:id="@+id/radio4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:text="@string/collection"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/submit_cash_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_transaction"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/border"
+        android:elevation="4dp"
+        android:layout_margin="16dp"/>
+</RelativeLayout>

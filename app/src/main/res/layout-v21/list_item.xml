@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:clickable="true"
+    android:elevation="4dp"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="126dp"
+            android:layout_alignBottom="@+id/product_description1"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/product_image"
+            android:scaleType="centerCrop"
+            android:transitionName="@string/transition_name"
+            tools:srcCompat="@drawable/box" />
+
+        <TextView
+            android:id="@+id/product_name1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_toRightOf="@+id/imageView2"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            tools:text="Coca Cola" />
+
+        <TextView
+            android:id="@+id/product_code1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_name1"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_toRightOf="@+id/imageView2"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="CC1012" />
+
+        <TextView
+            android:id="@+id/product_description1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_code1"
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:layout_toRightOf="@+id/imageView2"
+            android:lines="3"
+            android:maxLines="3"
+            android:textSize="18sp"
+            tools:text="dfddddddddddddddddddddddddddddddddddddddddddd" />
+
+        <LinearLayout
+            android:id="@+id/summary_of_stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView2">
+
+            <TextView
+                android:id="@+id/inv_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/total_stock"
+                android:textColor="@color/colorGreen"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/incoming_stock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/incoming"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/outgoing_stock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/sales_out"
+                android:textColor="@color/colorRed"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/stock_replenishment_notice"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            android:layout_below="@+id/summary_of_stock">
+
+
+            <TextView
+                android:id="@+id/notice_to_replenish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/replenishment_notice"
+                android:textColor="@color/colorAccent"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

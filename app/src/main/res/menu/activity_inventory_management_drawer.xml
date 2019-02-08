@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/inventory_management1"
+            android:icon="@drawable/ic_business_black_24dp"
+            android:title="Inventory Management" />
+
+        <item
+            android:id="@+id/cash_bank_statement"
+            android:icon="@drawable/ic_account_balance_black_24dp"
+            android:title="Cashbook and Bank" />
+
+        <item
+            android:id="@+id/cost_of_sales_and_expenses1"
+            android:icon="@drawable/ic_attach_money_black_24dp"
+            android:title="Sales Cost and Expenses" />
+    </group>
+
+    <item android:title="Accounts and Reports">
+        <menu>
+            <item
+                android:id="@+id/inventory_history"
+                android:icon="@drawable/ic_home_black_24dp"
+                android:title="Inventory History/Records" />
+            <item
+                android:id="@+id/price_list"
+                android:icon="@drawable/ic_format_list_numbered_black_24dp"
+                android:title="Price List" />
+            <item
+                android:id="@+id/sales_journal"
+                android:icon="@drawable/ic_assessment_black_24dp"
+                android:title="Sales Journal/History" />
+            <item
+                android:id="@+id/purchase_journal"
+                android:icon="@drawable/ic_assessment_black_24dp"
+                android:title="Purchase Journal/History" />
+            <item
+                android:id="@+id/account_receivables"
+                android:icon="@drawable/ic_credit_card_black_24dp"
+                android:title="Account Receivables" />
+            <item
+                android:id="@+id/account_payables"
+                android:icon="@drawable/ic_credit_card_black_24dp"
+                android:title="Account Payables" />
+            <item
+                android:id="@+id/profit_loss"
+                android:icon="@drawable/ic_assessment_black_24dp"
+                android:title="Profit and Loss Account" />
+
+        </menu>
+    </item>
+    <item android:title="Back Up/Restore Data">
+        <menu>
+            <item
+                android:id="@+id/export"
+                android:icon="@drawable/ic_import_export_black_24dp"
+                android:title="Export Data to CSV" />
+
+            <item
+                android:id="@+id/restore"
+                android:icon="@drawable/ic_import_contacts_black_24dp"
+                android:title="Import Data from CSV" />
+
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_list_item2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#080808"
+    android:padding="@dimen/widget_margin">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="130dp"
+        android:layout_height="110dp"
+        android:layout_margin="4dp"
+        android:layout_alignBottom="@id/sold_stock"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/product_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/box" />
+
+    <TextView
+        android:id="@+id/product_name2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@id/imageView2"
+        android:layout_toRightOf="@id/imageView2"
+        android:textColor="@color/colorPrimary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:text="Coca Cola" />
+
+    <TextView
+        android:id="@+id/instore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Remainder: "
+        android:layout_toEndOf="@id/imageView2"
+        android:layout_toRightOf="@id/imageView2"
+        android:layout_below="@id/product_name2"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/colorGreen"/>
+
+    <TextView
+        android:id="@+id/purchased_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Purchases: "
+        android:layout_toEndOf="@id/imageView2"
+        android:layout_toRightOf="@id/imageView2"
+        android:layout_below="@id/instore"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/sold_stock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="Sales: "
+        android:layout_toEndOf="@id/imageView2"
+        android:layout_toRightOf="@id/imageView2"
+        android:layout_below="@id/purchased_stock"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="2dp"
+        android:textColor="@color/colorRed"/>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enter_product_name_here">Enter product name here</string>
+    <string name="enter_product_code">Enter product code</string>
+    <string name="product_description">Product description</string>
+</resources>

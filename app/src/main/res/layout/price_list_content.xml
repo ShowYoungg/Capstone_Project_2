@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        android:weightSum="4.5">
+
+        <TextView
+            android:id="@+id/product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/product_name"
+            android:padding="8dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/cost_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:text="@string/cost_price"
+            android:textColor="@color/colorRed"
+            android:padding="8dp"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/sales_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.25"
+            android:text="@string/sale_price"
+            android:textColor="@color/colorPrimary"
+            android:padding="8dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/price_list_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>
