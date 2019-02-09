@@ -15,6 +15,7 @@
         android:layout_marginTop="68dp"
         android:scaleType="fitXY"
         android:src="@drawable/box"
+        android:contentDescription="@string/image_of_a_calculator"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="20dp" />
@@ -37,6 +38,7 @@
         android:layout_marginTop="68dp"
         android:scaleType="centerCrop"
         android:src="@drawable/calculator"
+        android:contentDescription="@string/image_of_a_calculator"
         app:layout_constraintStart_toEndOf="@+id/inventory_management"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginLeft="48dp" />
@@ -51,6 +53,7 @@
         android:layout_marginTop="76dp"
         android:scaleType="centerCrop"
         android:src="@drawable/office"
+        android:contentDescription="@string/content_description_of_someone_with_calculator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toEndOf="@+id/cashbook_and_bank"

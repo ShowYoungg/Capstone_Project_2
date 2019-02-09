@@ -212,7 +212,7 @@ public class InventoryManagementActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         View headerView = navigationView.getHeaderView(0);
         TextView userTextView = headerView.findViewById(R.id.user);
-        userTextView.setText("Welcome " + user);
+        userTextView.setText(getString(R.string.welcome_user)+ " " + user);
 
         if (mTwoPane) {
             ProductTransactionFragment p = new ProductTransactionFragment();
@@ -918,9 +918,9 @@ public class InventoryManagementActivity extends AppCompatActivity
             totalPurchases = sharedPreferences.getInt("Total Purchases" + productName, 0);
             totalSales = sharedPreferences.getInt("Total Sales" + productName, 0);
             int inStore = sharedPreferences.getInt("InStore" + productName, 0);
-            totalIncomingStock.setText("Incoming: " + String.valueOf(totalPurchases));
-            totalOutgoingStock.setText("Outgoing: " + String.valueOf(totalSales));
-            totalInventory.setText("In-Store: " + String.valueOf(totalPurchases - totalSales));
+            totalIncomingStock.setText(context.getString(R.string.incoming_) + " " + String.valueOf(totalPurchases));
+            totalOutgoingStock.setText(context.getString(R.string.outgoin_) + " "+ String.valueOf(totalSales));
+            totalInventory.setText(context.getString(R.string.in_store_) + " " + String.valueOf(totalPurchases - totalSales));
 
 
             if ((totalPurchases - totalSales) <= reorderLevel && totalPurchases != 0 && totalSales != 0) {

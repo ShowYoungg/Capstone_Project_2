@@ -89,7 +89,7 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
 
         Slide slide = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            slide = new Slide(Gravity.LEFT);
+            slide = new Slide(Gravity.START);
             slide.addTarget(R.id.frag_slide);
             slide.setInterpolator(AnimationUtils.loadInterpolator(getContext(),
                     android.R.interpolator.linear_out_slow_in));
@@ -152,7 +152,7 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
                     id = tl.getId();
                     nameProduct = tl.getProductName();
 
-                    saveDetails.setText("Update");
+                    saveDetails.setText(R.string.update_);
                     AppExecutors.getInstance().diskIO().execute(new Runnable() {
                         @Override
                         public void run() {

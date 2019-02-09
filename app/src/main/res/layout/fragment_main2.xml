@@ -14,7 +14,7 @@
         android:layout_marginEnd="@dimen/activity_horizontal_margin"
         android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="skdskfjdkfjkdjfkdjfk"
+        android:text="@string/skdskfjdkfjkdjfkdjfk"
         android:textSize="30sp"
         android:textColor="@color/colorGreen"
         app:layout_constraintLeft_toLeftOf="parent"

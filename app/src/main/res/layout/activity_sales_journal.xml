@@ -27,13 +27,13 @@
             android:inputType="date"
             android:textSize="15sp"
             android:layout_margin="2dp"
-            android:hint="From: MM/dd/yyyy"/>
+            android:hint="@string/from_date"/>
 
         <EditText
             android:id="@+id/end_date"
             android:layout_width="0dp"
             android:layout_weight="2"
-            android:hint="To: MM/dd/yyyy"
+            android:hint="@string/to_date"
             android:layout_height="wrap_content"
             android:inputType="date"
             android:layout_margin="2dp"

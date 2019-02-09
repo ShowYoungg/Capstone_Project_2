@@ -70,11 +70,11 @@ public class ExpensesAdapter extends RecyclerView.Adapter<ExpensesAdapter.Expens
             holder.balance.setText(String.valueOf(d));
 
             if ((costAndExpenses.getNature()).equals("Cost of Sales")) {
-                holder.debit.setText("CS");
+                holder.debit.setText(R.string.cs);
                 holder.credit.setText("");
             } else {
                 holder.debit.setText("");
-                holder.credit.setText("EX");
+                holder.credit.setText(R.string.ex);
             }
         }
     }

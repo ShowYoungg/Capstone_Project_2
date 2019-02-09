@@ -61,7 +61,7 @@ public class PriceListActivity extends AppCompatActivity{
 
         Slide slide = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            slide = new Slide(Gravity.LEFT);
+            slide = new Slide(Gravity.START);
             slide.addTarget(R.id.list_recycler);
             slide.setInterpolator(AnimationUtils.loadInterpolator(this,
                     android.R.interpolator.linear_out_slow_in));

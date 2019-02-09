@@ -22,7 +22,7 @@ public class InventoryService extends IntentService {
     List<ProductCategory> productCategoryList = new ArrayList<>();
     public static final String ACTION_GET_STOCK_DATA = "com.soyinka.soyombo.inventorymanagement";
     public static final String ACTION_UPDATE_STOCK_WIDGETS = "com.soyinka.soyombo.inventorymanagement.action.update_stock_widgets";
-    public static final String EXTRA_PLANT_ID = "com.example.android.mygarden.extra.PLANT_ID";;
+    public static final String EXTRA_PLANT_ID = "com.example.android.mygarden.extra.PLANT_ID";
 
 
 

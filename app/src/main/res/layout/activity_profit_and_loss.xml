@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:text="Profit and Loss"
+                android:text="@string/profit_and_loss_title"
                 android:textColor="@color/colorPrimary"
                 android:textSize="25sp" />
 
@@ -42,7 +42,7 @@
                 android:layout_weight="2.5"
                 android:layout_height="match_parent"
                 android:background="@drawable/border"
-                android:text="All Quarters"
+                android:text="@string/all_quarters_title"
                 android:textColor="@color/colorPrimary"
                 android:gravity="center"/>
 
@@ -52,7 +52,7 @@
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
-                android:text="Q1"
+                android:text="@string/q1_title"
                 android:textColor="@color/colorPrimary"/>
 
             <Button
@@ -61,7 +61,7 @@
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
-                android:text="Q2"
+                android:text="@string/q2_title"
                 android:textColor="@color/colorPrimary"/>
 
             <Button
@@ -70,7 +70,7 @@
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:background="@drawable/border"
-                android:text="Q3"
+                android:text="@string/q3_title"
                 android:textColor="@color/colorPrimary"/>
 
         </LinearLayout>
@@ -96,7 +96,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1.12"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1.12"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="4"
-                android:text="Sales"
+                android:text="@string/sales_title"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -150,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="2.6"
-                android:text="Opening Stock"
+                android:text="@string/opening_stock_title"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -161,7 +161,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="2"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -177,7 +177,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="2.6"
-                android:text="Purchases"
+                android:text="@string/purchases_title"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -188,7 +188,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="2"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -204,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="2.55"
-                android:text="Closing Stock"
+                android:text="@string/closing_stock_title"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -214,7 +214,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="2"
-                android:text="(000)"
+                android:text="@string/_000_negative"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -240,7 +240,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -250,7 +250,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="(000)"
+                android:text="@string/_000_negative"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -268,7 +268,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="4"
-                android:text="Gross Profit"
+                android:text="@string/gross_profit_title"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -278,7 +278,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -295,7 +295,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="4"
-                android:text="Other Expenses"
+                android:text="@string/other_expenses_title"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -306,7 +306,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="(000)"
+                android:text="@string/_000_negative"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -324,7 +324,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="4"
-                android:text="Net Profit"
+                android:text="@string/net_profit_title"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -335,7 +335,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp"
                 android:textStyle="bold" />

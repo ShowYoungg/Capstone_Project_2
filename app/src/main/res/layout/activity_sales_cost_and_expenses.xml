@@ -128,7 +128,7 @@
                     android:layout_margin="8dp"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="Bank"
+                    android:text="@string/bank"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp" />
 
@@ -139,7 +139,7 @@
                     android:layout_margin="8dp"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="Cash"
+                    android:text="@string/cash"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp" />
 
@@ -173,7 +173,7 @@
                     android:layout_margin="8dp"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="Cost of Sales"
+                    android:text="@string/cost_of_sales"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp" />
 
@@ -184,7 +184,7 @@
                     android:layout_margin="8dp"
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp"
-                    android:text="Expenses"
+                    android:text="@string/expenses_title"
                     android:textColor="@color/colorPrimary"
                     android:textSize="20sp" />
 

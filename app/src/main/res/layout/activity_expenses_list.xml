@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="0dp"
                 android:layout_weight="4"
-                android:text="Cost And Expenses"
+                android:text="@string/cost_and_expensess"
                 android:textColor="@color/colorPrimary"
                 android:textSize="25sp" />
 
@@ -79,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1.55"
-                android:text="Date"
+                android:text="@string/date_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="2.05"
-                android:text="Description"
+                android:text="@string/description_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -97,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="CS"
+                android:text="@string/cs"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="EX"
+                android:text="@string/ex"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -116,7 +116,7 @@
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:text="$"
+                android:text="@string/dollar_sign"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
 
@@ -155,7 +155,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="4dp"
                 android:layout_weight="1.12"
-                android:text="'000"
+                android:text="@string/_000_"
                 android:textColor="@color/colorPrimary"
                 android:textSize="20sp" />
         </LinearLayout>

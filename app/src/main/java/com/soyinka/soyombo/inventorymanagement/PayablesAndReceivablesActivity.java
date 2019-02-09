@@ -51,7 +51,7 @@ public class PayablesAndReceivablesActivity extends AppCompatActivity {
 
         Slide slide = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            slide = new Slide(Gravity.LEFT);
+            slide = new Slide(Gravity.START);
             slide.addTarget(R.id.expenses_slide2);
             slide.setInterpolator(AnimationUtils.loadInterpolator(this,
                     android.R.interpolator.linear_out_slow_in));
@@ -80,9 +80,9 @@ public class PayablesAndReceivablesActivity extends AppCompatActivity {
             accountType = i.getStringExtra("accounttype");
             Log.v("accounttype", accountType);
             if (accountType.equals("payables") && textView != null) {
-                textView.setText("Account Payables");
+                textView.setText(R.string.accountpay);
             } else if (accountType.equals("receivables") && textView != null) {
-                textView.setText("Account Receivables");
+                textView.setText(R.string.accountreceive);
             }
         }
 

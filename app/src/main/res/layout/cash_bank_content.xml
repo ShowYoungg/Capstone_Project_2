@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
             android:layout_weight="1.55"
-            android:text="Date"
+            android:text="@string/date"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
 
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="2.05"
-            android:text="Description"
+            android:text="@string/description"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
 
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1"
-            android:text="DR"
+            android:text="@string/dr"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
 
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1"
-            android:text="CR"
+            android:text="@string/cr"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
 
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1"
-            android:text="BAL"
+            android:text="@string/bal"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
 
@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1.12"
-            android:text="'000"
+            android:text="@string/_000_"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
 
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1.12"
-            android:text="'000"
+            android:text="@string/_000_"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
 
@@ -99,7 +99,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
             android:layout_weight="1.12"
-            android:text="'000"
+            android:text="@string/_000_"
             android:textSize="20sp"
             android:textColor="@color/colorPrimary"/>
     </LinearLayout>

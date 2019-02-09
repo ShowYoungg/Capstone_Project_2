@@ -62,14 +62,15 @@ public class HistoryAndRecordAdapter extends RecyclerView.Adapter<HistoryAndReco
 
         if (transaction != null){
             holder.supplierName.setText(transaction.getSupplier());
-            holder.quantity.setText("Qty: " + transaction.getQuantity());
+            holder.quantity.setText(mContext.getString(R.string.qty_) + " " + transaction.getQuantity());
             holder.transactionFund.setText(transaction.getTransactionFund());
             holder.transactionType.setText(transaction.getTransactionType());
-            holder.costPrice.setText("Cost Price: " + transaction.getCostPrice());
-            holder.salesPrice.setText("Sales Price: " + transaction.getSalesPrice()
-                    + "\n" + "Amount: " + transaction.getTotalAmount());
+            holder.costPrice.setText(mContext.getString(R.string.cost_price_) + " " +  transaction.getCostPrice());
+            holder.salesPrice.setText(mContext.getString(R.string.sales_price_) + " " + transaction.getSalesPrice()
+                    + "\n" + mContext.getString(R.string.amount_) + " " + transaction.getTotalAmount());
             holder.date.setText(transaction.getDate());
         }
+
         //int i = holder.getAdapterPosition();
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

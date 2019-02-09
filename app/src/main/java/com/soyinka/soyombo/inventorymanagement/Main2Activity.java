@@ -224,9 +224,9 @@ public class Main2Activity extends AppCompatActivity {
                         }
 
                 //        nameArgs = name;
-                        totalStock.setText("In-Store: " + String.valueOf(totalPurchases - totalSales));
-                        in.setText("Purchases: " + String.valueOf(totalPurchases));
-                        out.setText("Sales: " + String.valueOf(totalSales));
+                        totalStock.setText(getContext().getString(R.string.instore_) + " " + String.valueOf(totalPurchases - totalSales));
+                        in.setText(getContext().getString(R.string.purchase__) + " " + String.valueOf(totalPurchases));
+                        out.setText(getContext().getString(R.string.sales__) + " " + String.valueOf(totalSales));
                         imageView.setImageResource(R.drawable.calculator);
 
                         for (Transaction t: categoryTransaction) {

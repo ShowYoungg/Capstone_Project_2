@@ -135,7 +135,7 @@
                     android:layout_marginStart="20dp"
                     android:minWidth="70dp"
                     android:background="@drawable/border"
-                    android:text="+"
+                    android:text="@string/plus_sign"
                     android:textSize="20sp" />
 
                 <EditText
@@ -144,7 +144,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:layout_marginRight="8dp"
-                    android:hint="0"
+                    android:hint="@string/_0"
                     android:ellipsize="middle"
                     android:inputType="number"
                     android:minHeight="50dp"
@@ -158,7 +158,7 @@
                     android:layout_marginBottom="8dp"
                     android:minWidth="70dp"
                     android:background="@drawable/border"
-                    android:text="-"
+                    android:text="@string/negative_sign"
                     android:textSize="20sp"/>
             </LinearLayout>
 

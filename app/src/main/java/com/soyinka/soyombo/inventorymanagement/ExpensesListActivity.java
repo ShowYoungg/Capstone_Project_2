@@ -57,7 +57,7 @@ public class ExpensesListActivity extends AppCompatActivity {
 
         Slide slide = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            slide = new Slide(Gravity.LEFT);
+            slide = new Slide(Gravity.START);
             slide.addTarget(R.id.expenses_slide);
             slide.setInterpolator(AnimationUtils.loadInterpolator(this,
                     android.R.interpolator.linear_out_slow_in));

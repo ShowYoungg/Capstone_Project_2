@@ -70,7 +70,7 @@ public class ProfitAndLossActivity extends AppCompatActivity {
 
         Slide slide = null;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            slide = new Slide(Gravity.LEFT);
+            slide = new Slide(Gravity.START);
             slide.addTarget(R.id.profit_slide);
             slide.setInterpolator(AnimationUtils.loadInterpolator(this,
                     android.R.interpolator.linear_out_slow_in));
@@ -473,8 +473,8 @@ public class ProfitAndLossActivity extends AppCompatActivity {
                     double io = salesBalanceB - newValueB;
 
                     if (salesBalanceB < newValueB) {
-                        gProfit.setText("Gross Loss");
-                        nProfit.setText("Net Loss");
+                        gProfit.setText(R.string.loss_);
+                        nProfit.setText(R.string.loss_net);
                     }
 
                     grossProfitView.setText(String.valueOf(BigDecimal.valueOf(io / 1000)));
