@@ -85,9 +85,6 @@ public class MainActivity extends AppCompatActivity {
         interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
         interstitialAd.loadAd(new AdRequest.Builder().build());
 
-
-//        enableAndStartIntent("User Test");
-
         if (sharedPreferences != null) {
             user = sharedPreferences.getString("User", "");
         } else {
