@@ -11,13 +11,16 @@
         android:id="@+id/inventory_management"
         android:layout_width="150dp"
         android:layout_height="100dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="68dp"
+        android:contentDescription="@string/image_of_a_calculator"
         android:scaleType="fitXY"
         android:src="@drawable/box"
-        android:contentDescription="@string/image_of_a_calculator"
+        app:layout_constraintEnd_toStartOf="@+id/cashbook_and_bank"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="8dp"
         android:layout_marginLeft="20dp" />
 
     <View
@@ -34,14 +37,15 @@
         android:id="@+id/cashbook_and_bank"
         android:layout_width="150dp"
         android:layout_height="100dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="68dp"
+        android:contentDescription="@string/image_of_a_calculator"
         android:scaleType="centerCrop"
         android:src="@drawable/calculator"
-        android:contentDescription="@string/image_of_a_calculator"
-        app:layout_constraintStart_toEndOf="@+id/inventory_management"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="48dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <ImageButton
@@ -50,12 +54,11 @@
         android:layout_height="100dp"
         android:layout_marginEnd="20dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="68dp"
+        android:contentDescription="@string/content_description_of_someone_with_calculator"
         android:scaleType="centerCrop"
         android:src="@drawable/office"
-        android:contentDescription="@string/content_description_of_someone_with_calculator"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.655"
         app:layout_constraintStart_toEndOf="@+id/cashbook_and_bank"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginRight="20dp"
@@ -162,7 +165,7 @@
         android:layout_marginStart="8dp"
         android:layout_weight="1"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        ads:adUnitId="ca-app-pub-2081307953269103/2797376312"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

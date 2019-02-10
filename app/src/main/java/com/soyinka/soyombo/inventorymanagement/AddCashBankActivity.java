@@ -15,6 +15,11 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,6 +30,7 @@ public class AddCashBankActivity extends AppCompatActivity {
     private RadioButton bank, cash, payment, collection;
     private String dateValue, description, amount, transactionType= "d", transactionFund = "d";
     private boolean bankValue, cashValue;
+    private InterstitialAd interstitialAd;
     private Button submit;
     AppDatabase productDB;
 
@@ -46,6 +52,15 @@ public class AddCashBankActivity extends AppCompatActivity {
         collection = findViewById(R.id.radio4);
         submit = findViewById(R.id.submit_cash_bank);
 
+        MobileAds.initialize(this, "ca-app-pub-2081307953269103~6353074998");
+        AdView mAdView = findViewById(R.id.adViewa);
+        mAdView.loadAd(new AdRequest.Builder().build());
+
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+
+
         ActionBar actionBar = this.getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -53,7 +68,7 @@ public class AddCashBankActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (intent != null) {
-            Toast.makeText(this, "Camera returned some data", Toast.LENGTH_SHORT).show();
+
             Intent data = intent.getParcelableExtra(Intent.EXTRA_INTENT);
             //Intent data = intent.getParcelableExtra("data");
             if (data != null) {
@@ -106,7 +121,7 @@ public class AddCashBankActivity extends AppCompatActivity {
             cashAndBank.setDat(date);
         } catch (ParseException e) {
             e.printStackTrace();
-            Toast.makeText(this, "Enter valid date format e.g 01/25/2019", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enter_valid_date_format, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -120,13 +135,12 @@ public class AddCashBankActivity extends AppCompatActivity {
                     productDB.cashAndBankDao().insertFund(cashAndBank);
                 }
             });
-            Toast.makeText(AddCashBankActivity.this, "Transaction Completed",
+            Toast.makeText(AddCashBankActivity.this, R.string.transaction_completed,
                     Toast.LENGTH_SHORT).show();
             finish();
             startActivity(new Intent(this, CashAndBankActivity.class));
         } else {
-            Toast.makeText(AddCashBankActivity.this, "One or more fields are" +
-                    " empty, please fill in completely", Toast.LENGTH_SHORT).show();
+            Toast.makeText(AddCashBankActivity.this, R.string.empty_fields, Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -144,8 +144,7 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
             nameProduct = bundle.getString("ProductName");
             position = bundle.getInt("Position");
             if (position == 0) {
-                Toast.makeText(getContext(), "From the interface" + position,
-                        Toast.LENGTH_LONG).show();
+
             } else if (position == 45) {
                 final Transaction tl = bundle.getParcelable("Transaction");
                 if (tl != null) {
@@ -195,8 +194,7 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
 
 
         if (imagePath != null) {
-            Toast.makeText(getContext(), "Image path is not null: ",
-                    Toast.LENGTH_LONG).show();
+
             productImage.setImageURI(Uri.parse(imagePath));
         } else {
             productImage.setImageResource(R.drawable.office);
@@ -288,8 +286,7 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
             int discountValue = Integer.parseInt(d);
 
             if (sales_Price <= costPrice) {
-                Toast.makeText(getContext(), "Sales Price should be greater than Cost Price," +
-                        " did you give discount?", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.salesprice_greater, Toast.LENGTH_SHORT).show();
             } else {
 
                 if (in.equals("Incoming Stock")) {
@@ -338,31 +335,31 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
 
         if ((Integer.parseInt(salesPrices) < Integer.parseInt(costPrices)) || quantities.equals("0")) {
             if (quantities.equals("0")) {
-                Toast.makeText(getContext(), "Quantity cannot be zero", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.zero_quantity, Toast.LENGTH_SHORT).show();
                 getActivity().recreate();
             }
 
             if ((Integer.parseInt(salesPrices) < Integer.parseInt(costPrices))) {
                 //Toast.makeText(getContext(), "Sales Price cannot be less than Cost Price", Toast.LENGTH_SHORT).show();
-                Snackbar.make(getView(), "Sales Price cannot be less than Cost Price", Snackbar.LENGTH_LONG)
+                Snackbar.make(getView(), R.string.salesprice_cannot_be_less, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
                 getActivity().recreate();
             }
         } else if (dates.equals("") || quantities.equals("") || salesPrices.equals("")
                 || suppliers.equals("") || costPrices.equals("") || inSt.equals("") ||
                 salesPrices.equals("0") || costPrices.equals("0")) {
-            Toast.makeText(getContext(), "One or more of the field(s) are empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.one_or_more_fieldempty, Toast.LENGTH_SHORT).show();
             getActivity().recreate();
         } else if (!inStocks && !outStocks) {
-            Snackbar.make(getView(), "Incoming or Outgoing?, Please select the transaction type", Snackbar.LENGTH_LONG)
+            Snackbar.make(getView(), R.string.incoming_or_outgoing, Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
             getActivity().recreate();
         } else if (totalPurchases < Integer.parseInt(quantities) && inSt.equals("Outgoing Stock")) {
             MainActivity.remindUserOfStockOut(getContext(),
-                    "Some stock categories re-order level reached, replenish now",
-                    "Inventory is low");
+                    getString(R.string.reorder_level_message1),
+                    getString(R.string.reorder_level_message2));
 
-            Toast.makeText(getContext(), "You have not enough stock of this category in store, replenish stock", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), R.string.not_enough_stock, Toast.LENGTH_SHORT).show();
             getActivity().recreate();
         } else {
 
@@ -379,8 +376,6 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
             transaction.setTotalAmount(totalAmount);
             Log.i("VALID HERE ", nameOfProduct + transaction.getProductName() + transaction.getTransactionType());
 
-            Toast.makeText(getContext(), "Testing Testing Testing", Toast.LENGTH_SHORT).show();
-
             final CashAndBank cashAndBank = new CashAndBank();
             try {
                 SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy", Locale.getDefault());
@@ -392,7 +387,7 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
                 cashAndBank.setDat(datem);
             } catch (ParseException e) {
                 e.printStackTrace();
-                Toast.makeText(getContext(), "Please leave the date in the previous format ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), R.string.leave_date_in_previous_format, Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -480,7 +475,7 @@ public class ProductTransactionFragment extends Fragment implements AdapterView.
                     }
                 }
             });
-            Toast.makeText(getContext(), "Data Saved into Database",
+            Toast.makeText(getContext(), R.string.saved_in_database,
                     Toast.LENGTH_SHORT).show();
 
             getActivity().finish();

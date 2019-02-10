@@ -76,15 +76,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
         android:text="@string/management"
         android:textSize="25sp"
         android:textStyle="bold"
+        ads:layout_constraintEnd_toStartOf="@+id/inventory_management"
         app:layout_constraintBottom_toBottomOf="@+id/inventory_management"
-        app:layout_constraintEnd_toStartOf="@+id/inventory_management"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="16dp" />
 
     <TextView
         android:id="@+id/textView4"
@@ -108,6 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginRight="8dp"
         android:text="@string/bank_account"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -153,16 +156,18 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="20dp"
         android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/amp_expenses"
         android:textSize="25sp"
         android:textStyle="bold"
+        ads:layout_constraintHorizontal_bias="0.578"
         app:layout_constraintBottom_toBottomOf="@+id/cost_of_sales_and_expenses"
         app:layout_constraintEnd_toStartOf="@+id/cost_of_sales_and_expenses"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="8dp" />
 
 
     <com.google.android.gms.ads.AdView
@@ -174,7 +179,7 @@
         android:layout_marginStart="8dp"
         android:layout_weight="1"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        ads:adUnitId="ca-app-pub-2081307953269103/2797376312"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

@@ -9,7 +9,7 @@
     tools:context="com.soyinka.soyombo.inventorymanagement.AddCashBankActivity">
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
+        android:id="@+id/adViewa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -17,7 +17,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-2081307953269103/8889566083" />
+        ads:adUnitId="ca-app-pub-2081307953269103/2797376312" />
 
 
     <LinearLayout

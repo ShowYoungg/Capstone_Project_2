@@ -21,6 +21,11 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -41,6 +46,7 @@ public class PayablesAndReceivablesActivity extends AppCompatActivity {
     private TextView textView;
     private String accountType;
     private Button twoMonths, recent, cancel;
+    private InterstitialAd interstitialAd;
     AppDatabase productDB;
 
 
@@ -68,6 +74,15 @@ public class PayablesAndReceivablesActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+
+        MobileAds.initialize(this, "ca-app-pub-2081307953269103~6353074998");
+        AdView mAdView = findViewById(R.id.adViewp);
+        mAdView.loadAd(new AdRequest.Builder().build());
+
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+
 
         textView = findViewById(R.id.account_payables_receivables_title);
         recyclerView = findViewById(R.id.account_payables_receivables);

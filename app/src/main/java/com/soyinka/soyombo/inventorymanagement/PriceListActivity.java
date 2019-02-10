@@ -65,7 +65,7 @@ public class PriceListActivity extends AppCompatActivity{
             slide.addTarget(R.id.list_recycler);
             slide.setInterpolator(AnimationUtils.loadInterpolator(this,
                     android.R.interpolator.linear_out_slow_in));
-            slide.setDuration(2000);
+            slide.setDuration(1000);
             getWindow().setEnterTransition(slide);
         }
 

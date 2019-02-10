@@ -99,7 +99,6 @@ public class ProductCategoryAdapter extends ArrayAdapter<ProductCategory> {
 
                             Log.i("NAME OF PRODUCT2", " " + finalNameOfProduct);
                         } else {
-                            Toast.makeText(getContext(), "from mTwoPane", Toast.LENGTH_SHORT).show();
 
                             Bundle b = new Bundle();
                             b.putString("ImagePath", p.getImagePath());
@@ -122,7 +121,6 @@ public class ProductCategoryAdapter extends ArrayAdapter<ProductCategory> {
 
                             Log.i("NAME OF PRODUCT2", " " + finalNameOfProduct);
                         } else {
-                            Toast.makeText(getContext(), "from mTwoPane", Toast.LENGTH_SHORT).show();
 
                             Bundle b = new Bundle();
                             b.putString("ImagePath", p.getImagePath());

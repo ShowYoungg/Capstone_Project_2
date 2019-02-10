@@ -89,12 +89,12 @@ public class ProfitAndLossActivity extends AppCompatActivity {
         List<Transaction> transactionArrayList2 = new ArrayList<>();
         List<SalesCostAndExpenses> expensesArrayList = new ArrayList<>();
 
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544-3347511713");
+        MobileAds.initialize(this, "ca-app-pub-2081307953269103~6353074998");
         AdView mAdView = findViewById(R.id.adView4);
         mAdView.loadAd(new AdRequest.Builder().build());
 
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
         interstitialAd.loadAd(new AdRequest.Builder().build());
 
 
@@ -305,7 +305,7 @@ public class ProfitAndLossActivity extends AppCompatActivity {
                         alertDialog.cancel();
                     } else {
                         Toast.makeText(ProfitAndLossActivity.this,
-                                "Please input an amount or press 'No' to cancel", Toast.LENGTH_SHORT).show();
+                                R.string.put_amount_or_cancel, Toast.LENGTH_SHORT).show();
                     }
                 }
             }

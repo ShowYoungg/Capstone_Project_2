@@ -59,15 +59,12 @@ public class MainActivity extends AppCompatActivity {
 
     /*****************************BANNER UNIT ID*******************************************/
     //"ca-app-pub-3940256099942544/6300978111" unitid banner testing
-    //ca-app-pub-2081307953269103/8889566083 unitid banner original
 
     /*****************************INTERSTISTIAL UNIT ID*******************************************/
     // ca-app-pub-3940256099942544/1033173712 for interstitil use this for testing
-    //ca-app-pub-2081307953269103/4039606228 for interstitial ads original unit id
 
     /*****************************APP ID*******************************************/
     //ca-app-pub-3940256099942544-3347511713 for banner testing app id
-    //ca-app-pub-2081307953269103-8001109957 for banner original app id
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,48 +80,48 @@ public class MainActivity extends AppCompatActivity {
         cashBookAndBankStatement = findViewById(R.id.cashbook_and_bank);
         costOfSalesAndExpenses = findViewById(R.id.cost_of_sales_and_expenses);
 
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544-3347511713");
+        MobileAds.initialize(this, "ca-app-pub-2081307953269103~6353074998");
         AdView mAdView = findViewById(R.id.adView1);
         mAdView.loadAd(new AdRequest.Builder().build());
 
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
         interstitialAd.loadAd(new AdRequest.Builder().build());
 
 
-//        enableAndStartIntent("User Test");
+        enableAndStartIntent("User Test");
 
-        if (sharedPreferences != null) {
-            user = sharedPreferences.getString("User", "");
-        } else {
-            user = "";
-        }
-
-        if (!isNetworkAvailable()) {
-            networkDialog();
-        } else if (isNetworkAvailable()) {
-
-            mAuthStateListener = new FirebaseAuth.AuthStateListener() {
-                @Override
-                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                    FirebaseUser onlineUser = firebaseAuth.getCurrentUser();
-                    if (onlineUser != null) {
-                        //User is signed in
-                        onSignedIn(onlineUser.getDisplayName());
-                    } else {
-                        //User is signed out
-                        onSignedOut();
-                        startActivityForResult(AuthUI.getInstance()
-                                .createSignInIntentBuilder()
-                                .setIsSmartLockEnabled(false)
-                                .setAvailableProviders(
-                                        Arrays.asList(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
-                                                new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
-                                .build(), 100);
-                    }
-                }
-            };
-        }
+//        if (sharedPreferences != null) {
+//            user = sharedPreferences.getString("User", "");
+//        } else {
+//            user = "";
+//        }
+//
+//        if (!isNetworkAvailable()) {
+//            networkDialog();
+//        } else if (isNetworkAvailable()) {
+//
+//            mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+//                @Override
+//                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+//                    FirebaseUser onlineUser = firebaseAuth.getCurrentUser();
+//                    if (onlineUser != null) {
+//                        //User is signed in
+//                        onSignedIn(onlineUser.getDisplayName());
+//                    } else {
+//                        //User is signed out
+//                        onSignedOut();
+//                        startActivityForResult(AuthUI.getInstance()
+//                                .createSignInIntentBuilder()
+//                                .setIsSmartLockEnabled(false)
+//                                .setAvailableProviders(
+//                                        Arrays.asList(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
+//                                                new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
+//                                .build(), 100);
+//                    }
+//                }
+//            };
+//        }
     }
 
 
@@ -140,8 +137,8 @@ public class MainActivity extends AppCompatActivity {
         } else if (!user.equals(onlineUser) && (!user.equals("") || !onlineUser.equals(""))) {
             AuthUI.getInstance().signOut(this);
             finish();
-            Toast.makeText(this, "You do not have access to this app", Toast.LENGTH_SHORT).show();
-            Toast.makeText(this, "You are signed out", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.no_access, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.signed_you_out, Toast.LENGTH_SHORT).show();
         } else {
 
         }
@@ -220,54 +217,54 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (isNetworkAvailable()) {
-            if (requestCode == 100) {
-                if (resultCode == RESULT_OK) {
-                    Toast.makeText(this, "Sign In Successful", Toast.LENGTH_SHORT).show();
-                } else if (resultCode == RESULT_CANCELED) {
-                    Toast.makeText(this, "Sign In Aborted", Toast.LENGTH_SHORT).show();
-                    finish();
-                }
-            }
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        if (isNetworkAvailable()) {
-            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
-        }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        if (isNetworkAvailable()) {
-            mFirebaseAuth.addAuthStateListener(mAuthStateListener);
-        }
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
-
-    /**
-     * This method checks if there is network connection
-     *
-     * @return boolean
-     */
-    private boolean isNetworkAvailable() {
-        ConnectivityManager con = (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetwork = con.getActiveNetworkInfo();
-        return activeNetwork != null && activeNetwork.isConnected();
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        if (isNetworkAvailable()) {
+//            if (requestCode == 100) {
+//                if (resultCode == RESULT_OK) {
+//                    Toast.makeText(this, R.string.sign_in_successful, Toast.LENGTH_SHORT).show();
+//                } else if (resultCode == RESULT_CANCELED) {
+//                    Toast.makeText(this, R.string.sign_in_aborted, Toast.LENGTH_SHORT).show();
+//                    finish();
+//                }
+//            }
+//        }
+//    }
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//
+//        if (isNetworkAvailable()) {
+//            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+//        }
+//    }
+//
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//
+//        if (isNetworkAvailable()) {
+//            mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+//        }
+//    }
+//
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//    }
+//
+//    /**
+//     * This method checks if there is network connection
+//     *
+//     * @return boolean
+//     */
+//    private boolean isNetworkAvailable() {
+//        ConnectivityManager con = (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE);
+//        NetworkInfo activeNetwork = con.getActiveNetworkInfo();
+//        return activeNetwork != null && activeNetwork.isConnected();
+//    }
 
 //    private boolean onNetworkAvailable() {
 //        new AsyncTask<Void, Void, Boolean>() {
@@ -323,11 +320,11 @@ public class MainActivity extends AppCompatActivity {
 
                     alertDialog.cancel();
                     enableAndStartIntent(users);
-                    Toast.makeText(MainActivity.this, "User registered", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.user_registered, Toast.LENGTH_SHORT).show();
                 } else if (!users.equals("") && user != null || users.equals("Oluwafunmi123%")) {
                     if (users.equals(user)) {
                         alertDialog.cancel();
-                        Toast.makeText(MainActivity.this, "Sign in successful", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, R.string.sign_in_, Toast.LENGTH_SHORT).show();
                         enableAndStartIntent(users);
                     }
 
@@ -341,14 +338,14 @@ public class MainActivity extends AppCompatActivity {
 //                        networkDialog();
                         finish();
                         startActivity(getIntent());
-                        Toast.makeText(MainActivity.this, "Please reset account", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, R.string.reset_account, Toast.LENGTH_SHORT).show();
                     }
 
                 } else if (users.equals("")) {
                     alertDialog.cancel();
                     alertDialog.dismiss();
                     networkDialog();
-                    Toast.makeText(MainActivity.this, "field is empty", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.field_empty, Toast.LENGTH_SHORT).show();
                 } else if (users.equals("Oluwafunmi123%")) {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.putString("User", "");
@@ -357,12 +354,12 @@ public class MainActivity extends AppCompatActivity {
                     alertDialog.cancel();
                     alertDialog.dismiss();
                     networkDialog();
-                    Toast.makeText(MainActivity.this, "Please reset account", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.account_reset, Toast.LENGTH_SHORT).show();
                 } else {
                     alertDialog.cancel();
                     alertDialog.dismiss();
                     networkDialog();
-                    Toast.makeText(MainActivity.this, "You do not have access to the database", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, R.string.access_not, Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -370,14 +367,14 @@ public class MainActivity extends AppCompatActivity {
         alertDialog = alertDialogBuilder1.show();
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (alertDialog != null) {
-            alertDialog.dismiss();
-            alertDialog = null;
-        }
-    }
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        if (alertDialog != null) {
+//            alertDialog.dismiss();
+//            alertDialog = null;
+//        }
+//    }
 
 
     public static void remindUserOfStockOut(Context context, String content1, String content2) {

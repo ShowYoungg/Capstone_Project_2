@@ -10,7 +10,7 @@
     tools:context="com.soyinka.soyombo.inventorymanagement.SalesCostAndExpensesActivity">
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
+        android:id="@+id/adViewe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -18,7 +18,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-2081307953269103/8889566083" />
+        ads:adUnitId="ca-app-pub-2081307953269103/2797376312" />
 
 
 
@@ -195,21 +195,21 @@
                     android:text="@string/explanation_of_expenses"
                     android:textColor="@color/colorAccent"
                     android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/submit_cash_bank1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/border"
+                    android:elevation="4dp"
+                    android:text="@string/add_expenses"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold" />
+
             </RadioGroup>
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/submit_cash_bank1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="16dp"
-        android:background="@drawable/border"
-        android:elevation="4dp"
-        android:text="@string/add_expenses"
-        android:textColor="@color/colorPrimary"
-        android:textStyle="bold" />
 
 </RelativeLayout>

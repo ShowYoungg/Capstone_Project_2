@@ -14,6 +14,11 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,6 +30,7 @@ public class SalesCostAndExpensesActivity extends AppCompatActivity {
     private String dateValue, description, amount, natureOfExpenses = "d", transactionFund = "d";
     private boolean bankValue, cashValue;
     private Button submit;
+    private InterstitialAd interstitialAd;
     AppDatabase productDB;
 
 
@@ -43,6 +49,14 @@ public class SalesCostAndExpensesActivity extends AppCompatActivity {
             slide.setDuration(1000);
             getWindow().setEnterTransition(slide);
         }
+
+        MobileAds.initialize(this, "ca-app-pub-2081307953269103~6353074998");
+        AdView mAdView = findViewById(R.id.adViewe);
+        mAdView.loadAd(new AdRequest.Builder().build());
+
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
+        interstitialAd.loadAd(new AdRequest.Builder().build());
 
         //productDB = AppDatabase.getInstance(getContext());
         productDB = Room.databaseBuilder(this, AppDatabase.class, "Inventory Database")
@@ -104,7 +118,7 @@ public class SalesCostAndExpensesActivity extends AppCompatActivity {
             cashAndBank.setDat(date);
         } catch (ParseException e) {
             e.printStackTrace();
-            Toast.makeText(this, "Enter valid date format e.g 01/25/2019", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enter_valid_date_format, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -120,13 +134,12 @@ public class SalesCostAndExpensesActivity extends AppCompatActivity {
                 }
             });
 
-            Toast.makeText(SalesCostAndExpensesActivity.this, "Expenses recorded",
+            Toast.makeText(SalesCostAndExpensesActivity.this, R.string.expenses_recorded,
                     Toast.LENGTH_SHORT).show();
             finish();
             startActivity(new Intent(this, ExpensesListActivity.class));
         } else {
-            Toast.makeText(SalesCostAndExpensesActivity.this, "One or more fields are" +
-                    " empty, please fill in completely", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SalesCostAndExpensesActivity.this, R.string.field_not_complete, Toast.LENGTH_SHORT).show();
         }
     }
 

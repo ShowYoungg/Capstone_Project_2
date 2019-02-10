@@ -25,6 +25,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -47,6 +52,7 @@ public class ExpensesListActivity extends AppCompatActivity {
     private Date sDate, eDate;
     private Button submitButton, thisMonth, lastMonth;
     private ExpensesAdapter expensesAdapter;
+    private InterstitialAd interstitialAd;
     AppDatabase productDB;
 
 
@@ -68,6 +74,15 @@ public class ExpensesListActivity extends AppCompatActivity {
         salesCostAndExpensesList = new ArrayList<>();
         salesCostAndExpensesList1 = new ArrayList<>();
         expensesArrayList = new ArrayList<>();
+
+        MobileAds.initialize(this, "ca-app-pub-2081307953269103~6353074998");
+        AdView mAdView = findViewById(R.id.adViewb);
+        mAdView.loadAd(new AdRequest.Builder().build());
+
+        interstitialAd = new InterstitialAd(this);
+        interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
+        interstitialAd.loadAd(new AdRequest.Builder().build());
+
 
         productDB = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "Inventory Database")
                 .fallbackToDestructiveMigration().build();
@@ -116,7 +131,7 @@ public class ExpensesListActivity extends AppCompatActivity {
                     year = sdf.format(yd);
                 } catch (ParseException e) {
                     e.printStackTrace();
-                    Toast.makeText(ExpensesListActivity.this, "Enter valid date format e.g 01/25/2019", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ExpensesListActivity.this, R.string.enter_valid_date_format, Toast.LENGTH_SHORT).show();
                 }
 
                 if (year != null) {
@@ -159,7 +174,7 @@ public class ExpensesListActivity extends AppCompatActivity {
                     year = sdf.format(yd);
                 } catch (ParseException e) {
                     e.printStackTrace();
-                    Toast.makeText(ExpensesListActivity.this, "Enter valid date format e.g 01/25/2019", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ExpensesListActivity.this, R.string.enter_valid_date_format, Toast.LENGTH_SHORT).show();
                 }
 
                 if (year != null) {
@@ -251,7 +266,7 @@ public class ExpensesListActivity extends AppCompatActivity {
             eDate = sdf.format(eeDate);
         } catch (ParseException e) {
             e.printStackTrace();
-            Toast.makeText(this, "Enter valid date format e.g 01/25/2019", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.enter_valid_date_format, Toast.LENGTH_SHORT).show();
         }
 
         final Date finalSsDate = ssDate;
@@ -305,7 +320,7 @@ public class ExpensesListActivity extends AppCompatActivity {
 
             } catch (ParseException e) {
                 e.printStackTrace();
-                Toast.makeText(this, "Enter valid date format e.g 01/25/2019", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.enter_valid_date_format, Toast.LENGTH_SHORT).show();
             }
 
             for (SalesCostAndExpenses t : salesCostAndExpensesList) {
@@ -318,7 +333,7 @@ public class ExpensesListActivity extends AppCompatActivity {
                     Log.i("SUBMIT A", "I am responding" + dateInMilliseconds);
                 } catch (ParseException e) {
                     e.printStackTrace();
-                    Toast.makeText(this, "Enter valid date format e.g 01/25/2019", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.enter_valid_date_format, Toast.LENGTH_SHORT).show();
                 }
 
                 if (dateInMillisecondsA <= dateInMilliseconds && dateInMillisecondsB >= dateInMilliseconds) {

@@ -165,5 +165,34 @@
     <string name="update_">Update</string>
     <string name="loss_">Gross Loss</string>
     <string name="loss_net">Net Loss</string>
+    <string name="error_opening_file">Error opening file</string>
+    <string name="transaction_completed">Transaction Completed</string>
+    <string name="empty_fields">One or more fields are empty, please fill in completely</string>
+    <string name="no_access">You do not have access to this app</string>
+    <string name="signed_you_out">You are signed out</string>
+    <string name="sign_in_successful">Sign In Successful</string>
+    <string name="sign_in_aborted">Sign In Aborted</string>
+    <string name="user_registered">User registered</string>
+    <string name="sign_in_">Sign in successful</string>
+    <string name="reset_account">Please reset account</string>
+    <string name="field_empty">field is empty</string>
+    <string name="account_reset">Please reset account</string>
+    <string name="access_not">You do not have access to the database</string>
+    <string name="file_not_found">file not found</string>
+    <string name="operation_aborted">operation aborted</string>
+    <string name="put_amount_or_cancel">Please input an amount or press \'No\' to cancel</string>
+    <string name="salesprice_greater">Sales Price should be greater than Cost Price, did you give discount?</string>
+    <string name="zero_quantity">Quantity cannot be zero</string>
+    <string name="salesprice_cannot_be_less">Sales Price cannot be less than Cost Price</string>
+    <string name="one_or_more_fieldempty">One or more of the field(s) are empty</string>
+    <string name="incoming_or_outgoing">Incoming or Outgoing?, Please select the transaction type</string>
+    <string name="reorder_level_message1">Some stock categories re-order level reached, replenish now</string>
+    <string name="reorder_level_message2">Inventory is low</string>
+    <string name="not_enough_stock">You have not enough stock of this category in store, replenish stock</string>
+    <string name="leave_date_in_previous_format">Please leave the date in the previous format</string>
+    <string name="saved_in_database">Data Saved into Database</string>
+    <string name="enter_valid_date_format">Enter valid date format e.g 01/25/2019</string>
+    <string name="expenses_recorded">Expenses recorded</string>
+    <string name="field_not_complete">One or more fields are empty, please fill in completely</string>
 
 </resources>

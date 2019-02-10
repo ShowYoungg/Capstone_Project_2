@@ -169,7 +169,7 @@
     </LinearLayout>
 
     <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
+        android:id="@+id/adViewb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -177,7 +177,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-2081307953269103/8889566083" />
+        ads:adUnitId="ca-app-pub-2081307953269103/2797376312" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/add_expenses"

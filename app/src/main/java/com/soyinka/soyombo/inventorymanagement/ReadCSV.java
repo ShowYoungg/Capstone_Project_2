@@ -33,7 +33,6 @@ public class ReadCSV {
 
         try {
 
-            Toast.makeText(context, "running1", Toast.LENGTH_SHORT).show();
 
             //Create a new list of student to be filled by CSV file data
             List<Transaction> transactionList = new ArrayList<>();
@@ -42,14 +41,12 @@ public class ReadCSV {
 
             //Create the file reader
             fileReader = new BufferedReader(new FileReader(fileName));
-            Toast.makeText(context, "running2", Toast.LENGTH_SHORT).show();
 
             //Read the CSV file header to skip it
             fileReader.readLine();
 
             //Read the file line by line starting from the second line
             while ((line = fileReader.readLine()) != null) {
-                Toast.makeText(context, "line is not null", Toast.LENGTH_SHORT).show();
 
                 //Get all tokens available in line
                 String[] tokens = line.split(COMMA_DELIMITER);
@@ -69,8 +66,7 @@ public class ReadCSV {
                     transaction.setProductName(tokens[11]);
                     transaction.setTotalAmount(tokens[12]);
                     transactionList.add(transaction);
-                    Toast.makeText(context, "t is populated"
-                            + transaction.getTotalAmount(), Toast.LENGTH_SHORT).show();
+
                 }
             }
 

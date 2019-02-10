@@ -135,12 +135,14 @@ public class InventoryManagementActivity extends AppCompatActivity
 //        productDB = Room.databaseBuilder(getApplicationContext(), AppDatabase.class, "Inventory Database")
 //                .fallbackToDestructiveMigration().build();
 
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544-3347511713");
-        AdView mAdView = findViewById(R.id.adView5);
-        mAdView.loadAd(new AdRequest.Builder().build());
+        MobileAds.initialize(this, "ca-app-pub-2081307953269103~6353074998");
+        if (findViewById(R.id.adView5) != null) {
+            AdView mAdView = findViewById(R.id.adView5);
+            mAdView.loadAd(new AdRequest.Builder().build());
+        }
 
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
         interstitialAd.loadAd(new AdRequest.Builder().build());
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss", Locale.getDefault());
@@ -212,7 +214,7 @@ public class InventoryManagementActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
         View headerView = navigationView.getHeaderView(0);
         TextView userTextView = headerView.findViewById(R.id.user);
-        userTextView.setText(getString(R.string.welcome_user)+ " " + user);
+        userTextView.setText(getString(R.string.welcome_user) + " " + user);
 
         if (mTwoPane) {
             ProductTransactionFragment p = new ProductTransactionFragment();
@@ -390,15 +392,15 @@ public class InventoryManagementActivity extends AppCompatActivity
     }
 
 
-    private void openDownloadedCSV(String filePath){
+    private void openDownloadedCSV(String filePath) {
         Uri path = Uri.fromFile(new File(filePath));
         Intent csvIntent = new Intent(Intent.ACTION_VIEW);
         csvIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         csvIntent.setDataAndType(path, "text/csv");
-        try{
+        try {
             startActivity(csvIntent);
-        } catch (ActivityNotFoundException e){
-            Toast.makeText(this, "Error opening file", Toast.LENGTH_SHORT).show();
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(this, R.string.error_opening_file, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -416,13 +418,13 @@ public class InventoryManagementActivity extends AppCompatActivity
         int id = item.getItemId();
         if (id == R.id.export) {
             // Handle the camera action
-            if (interstitialAd.isLoaded()){
+            if (interstitialAd.isLoaded()) {
                 interstitialAd.show();
             } else {
                 writeToCSV();
             }
 
-            interstitialAd.setAdListener( new AdListener(){
+            interstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdClosed() {
                     writeToCSV();
@@ -432,13 +434,13 @@ public class InventoryManagementActivity extends AppCompatActivity
         } else if (id == R.id.restore) {
             //Handle share
             //restoreFromCSV();
-            if (interstitialAd.isLoaded()){
+            if (interstitialAd.isLoaded()) {
                 interstitialAd.show();
             } else {
                 restoreFromCSV();
             }
 
-            interstitialAd.setAdListener( new AdListener(){
+            interstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdClosed() {
                     restoreFromCSV();
@@ -447,13 +449,13 @@ public class InventoryManagementActivity extends AppCompatActivity
             });
         } else if (id == R.id.share) {
             //Handle share
-            if (interstitialAd.isLoaded()){
+            if (interstitialAd.isLoaded()) {
                 interstitialAd.show();
             } else {
                 shareApp();
             }
 
-            interstitialAd.setAdListener( new AdListener(){
+            interstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdClosed() {
                     shareApp();
@@ -464,14 +466,14 @@ public class InventoryManagementActivity extends AppCompatActivity
         } else if (id == R.id.inventory_management1) {
 
         } else if (id == R.id.cash_bank_statement) {
-            if (interstitialAd.isLoaded()){
+            if (interstitialAd.isLoaded()) {
                 interstitialAd.show();
             } else {
                 startActivity(new Intent(InventoryManagementActivity.this,
                         CashAndBankActivity.class));
             }
 
-            interstitialAd.setAdListener( new AdListener(){
+            interstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdClosed() {
                     startActivity(new Intent(InventoryManagementActivity.this,
@@ -489,14 +491,14 @@ public class InventoryManagementActivity extends AppCompatActivity
                     Main2Activity.class));
 
         } else if (id == R.id.price_list) {
-            if (interstitialAd.isLoaded()){
+            if (interstitialAd.isLoaded()) {
                 interstitialAd.show();
             } else {
                 startActivity(new Intent(InventoryManagementActivity.this,
                         PriceListActivity.class));
             }
 
-            interstitialAd.setAdListener( new AdListener(){
+            interstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdClosed() {
                     startActivity(new Intent(InventoryManagementActivity.this,
@@ -899,10 +901,10 @@ public class InventoryManagementActivity extends AppCompatActivity
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            Toast.makeText(this, "file not found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.file_not_found, Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             e.printStackTrace();
-            Toast.makeText(this, "operation aborted", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.operation_aborted, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -919,7 +921,7 @@ public class InventoryManagementActivity extends AppCompatActivity
             totalSales = sharedPreferences.getInt("Total Sales" + productName, 0);
             int inStore = sharedPreferences.getInt("InStore" + productName, 0);
             totalIncomingStock.setText(context.getString(R.string.incoming_) + " " + String.valueOf(totalPurchases));
-            totalOutgoingStock.setText(context.getString(R.string.outgoin_) + " "+ String.valueOf(totalSales));
+            totalOutgoingStock.setText(context.getString(R.string.outgoin_) + " " + String.valueOf(totalSales));
             totalInventory.setText(context.getString(R.string.in_store_) + " " + String.valueOf(totalPurchases - totalSales));
 
 

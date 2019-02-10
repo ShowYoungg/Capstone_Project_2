@@ -94,12 +94,12 @@ public class PurchasesJournal extends AppCompatActivity {
         recent = findViewById(R.id.recent);
         cancel = findViewById(R.id.cancel);
 
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544-3347511713");
+        MobileAds.initialize(this, "ca-app-pub-2081307953269103~6353074998");
         AdView mAdView = findViewById(R.id.adView2);
         mAdView.loadAd(new AdRequest.Builder().build());
 
         interstitialAd = new InterstitialAd(this);
-        interstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        interstitialAd.setAdUnitId("ca-app-pub-2081307953269103/4364064262");
         interstitialAd.loadAd(new AdRequest.Builder().build());
 
 
