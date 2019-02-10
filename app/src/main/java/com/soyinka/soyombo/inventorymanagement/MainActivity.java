@@ -70,9 +70,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        Sherlock.init(this);
-//        Sherlock.getInstance().getAllCrashes();
-
         mFirebaseAuth = FirebaseAuth.getInstance();
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -89,39 +86,39 @@ public class MainActivity extends AppCompatActivity {
         interstitialAd.loadAd(new AdRequest.Builder().build());
 
 
-        enableAndStartIntent("User Test");
+//        enableAndStartIntent("User Test");
 
-//        if (sharedPreferences != null) {
-//            user = sharedPreferences.getString("User", "");
-//        } else {
-//            user = "";
-//        }
-//
-//        if (!isNetworkAvailable()) {
-//            networkDialog();
-//        } else if (isNetworkAvailable()) {
-//
-//            mAuthStateListener = new FirebaseAuth.AuthStateListener() {
-//                @Override
-//                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-//                    FirebaseUser onlineUser = firebaseAuth.getCurrentUser();
-//                    if (onlineUser != null) {
-//                        //User is signed in
-//                        onSignedIn(onlineUser.getDisplayName());
-//                    } else {
-//                        //User is signed out
-//                        onSignedOut();
-//                        startActivityForResult(AuthUI.getInstance()
-//                                .createSignInIntentBuilder()
-//                                .setIsSmartLockEnabled(false)
-//                                .setAvailableProviders(
-//                                        Arrays.asList(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
-//                                                new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
-//                                .build(), 100);
-//                    }
-//                }
-//            };
-//        }
+        if (sharedPreferences != null) {
+            user = sharedPreferences.getString("User", "");
+        } else {
+            user = "";
+        }
+
+        if (!isNetworkAvailable()) {
+            networkDialog();
+        } else if (isNetworkAvailable()) {
+
+            mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+                @Override
+                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                    FirebaseUser onlineUser = firebaseAuth.getCurrentUser();
+                    if (onlineUser != null) {
+                        //User is signed in
+                        onSignedIn(onlineUser.getDisplayName());
+                    } else {
+                        //User is signed out
+                        onSignedOut();
+                        startActivityForResult(AuthUI.getInstance()
+                                .createSignInIntentBuilder()
+                                .setIsSmartLockEnabled(false)
+                                .setAvailableProviders(
+                                        Arrays.asList(new AuthUI.IdpConfig.Builder(AuthUI.EMAIL_PROVIDER).build(),
+                                                new AuthUI.IdpConfig.Builder(AuthUI.GOOGLE_PROVIDER).build()))
+                                .build(), 100);
+                    }
+                }
+            };
+        }
     }
 
 
@@ -217,54 +214,54 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (isNetworkAvailable()) {
-//            if (requestCode == 100) {
-//                if (resultCode == RESULT_OK) {
-//                    Toast.makeText(this, R.string.sign_in_successful, Toast.LENGTH_SHORT).show();
-//                } else if (resultCode == RESULT_CANCELED) {
-//                    Toast.makeText(this, R.string.sign_in_aborted, Toast.LENGTH_SHORT).show();
-//                    finish();
-//                }
-//            }
-//        }
-//    }
-//
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//
-//        if (isNetworkAvailable()) {
-//            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
-//        }
-//    }
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//
-//        if (isNetworkAvailable()) {
-//            mFirebaseAuth.addAuthStateListener(mAuthStateListener);
-//        }
-//    }
-//
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//    }
-//
-//    /**
-//     * This method checks if there is network connection
-//     *
-//     * @return boolean
-//     */
-//    private boolean isNetworkAvailable() {
-//        ConnectivityManager con = (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE);
-//        NetworkInfo activeNetwork = con.getActiveNetworkInfo();
-//        return activeNetwork != null && activeNetwork.isConnected();
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (isNetworkAvailable()) {
+            if (requestCode == 100) {
+                if (resultCode == RESULT_OK) {
+                    Toast.makeText(this, R.string.sign_in_successful, Toast.LENGTH_SHORT).show();
+                } else if (resultCode == RESULT_CANCELED) {
+                    Toast.makeText(this, R.string.sign_in_aborted, Toast.LENGTH_SHORT).show();
+                    finish();
+                }
+            }
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if (isNetworkAvailable()) {
+            mFirebaseAuth.removeAuthStateListener(mAuthStateListener);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (isNetworkAvailable()) {
+            mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    /**
+     * This method checks if there is network connection
+     *
+     * @return boolean
+     */
+    private boolean isNetworkAvailable() {
+        ConnectivityManager con = (ConnectivityManager) getSystemService(getApplicationContext().CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = con.getActiveNetworkInfo();
+        return activeNetwork != null && activeNetwork.isConnected();
+    }
 
 //    private boolean onNetworkAvailable() {
 //        new AsyncTask<Void, Void, Boolean>() {
@@ -333,9 +330,6 @@ public class MainActivity extends AppCompatActivity {
                         editor.putString("User", "");
                         editor.apply();
 
-//                        alertDialog.cancel();
-//                        alertDialog.dismiss();
-//                        networkDialog();
                         finish();
                         startActivity(getIntent());
                         Toast.makeText(MainActivity.this, R.string.reset_account, Toast.LENGTH_SHORT).show();
@@ -367,14 +361,14 @@ public class MainActivity extends AppCompatActivity {
         alertDialog = alertDialogBuilder1.show();
     }
 
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//        if (alertDialog != null) {
-//            alertDialog.dismiss();
-//            alertDialog = null;
-//        }
-//    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (alertDialog != null) {
+            alertDialog.dismiss();
+            alertDialog = null;
+        }
+    }
 
 
     public static void remindUserOfStockOut(Context context, String content1, String content2) {
