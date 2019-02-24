@@ -44,5 +44,5 @@ This app ensures:
 - [x] Stock category features the total summary of stocks (In-store, Purchases and Sales).
 
 ### Google Play Store Listing
-Inventory and Sales Account Manager app is on Google Play Store [https://play.google.com/store/apps/details?id=com.soyinka.soyombo.inventorymanagement]
+Inventory and Sales Account Manager app is on Google Play Store (https://play.google.com/store/apps/details?id=com.soyinka.soyombo.inventorymanagement)
 
