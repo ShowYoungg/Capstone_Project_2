@@ -23,38 +23,22 @@ This app also ensure Cash and Bank accounts are kept; this feature can be used a
 In addition, Expenses like sales expenses and general expenses are kept. This feature enables the app to prepare Trading, Profit and Loss Accounts and ensures Sales Expenses are separated from other expenses.
 
 This app ensures:
+- [x] Accounting record of stocks are kept.
 
-Accounting record of stocks are kept.
+- [x] Price list that features cost price and selling price is featured.
+- [x] Stock inflow and outflow management. 
+- [x] Cash Book and Bank Statement are prepared.
+- [x] Account Receivables and Payables are prepared.
+- [x] Trading, Profit and Loss account is generated.
+- [x] Accounting records of all sales and purchases are kept.
+- [x] Accounting records for debtors and creditors are kept.
+- [x] Product pictures are also featured.
+- [x] All records can be exported to csv file which will be saved on device memory in the directory of Inventory and the file name is excel.csv
+- [x] The app can also import pre populated csv file, all entries, postings and accounting records will be made automatically. 
 
-Price list that features cost price and selling price is featured.
-Stock inflow and outflow management. 
-Cash Book and Bank Statement are prepared.
-Account Receivables and Payables are prepared.
-Trading, Profit and Loss account is generated.
-Accounting records of all sales and purchases are kept.
-Accounting records for debtors and creditors are kept.
-Product pictures are also featured.
-All records can be exported to csv file which will be saved on device memory in the directory of Inventory and the file name is excel.csv
-The app can also import pre populated csv file, all entries, postings and accounting records will be made automatically. 
-
-It is noteworthy to first input some data into the app and export to a csv file in order to know the order in which data is arranged and populated in the csv; this will enable users to know how to populate the csv for future import into the app.
-
-## Rubric
-
-### General App Usage
-- [x] App should display recipes from provided network resource.
-- [x] App should allow navigation between individual recipes and recipe steps.
-- [x] App uses RecyclerView and can handle recipe steps that include videos or images.
-- [x] App conforms to common standards found in the Android Nanodegree General Project Guidelines.
-
-### Components and Libraries
-- [x] Application uses Master Detail Flow to display recipe steps and navigation between them.
-- [x] Application uses Exoplayer to display videos.
-- [x] Application properly initializes and releases video assets when appropriate.
-- [x] Application should properly retrieve media assets from the provided network links. It should properly handle network requests.
-- [x] Application makes use of Espresso to test aspects of the UI.
-- [x] Application sensibly utilizes a third-party library to enhance the app's features. That could be helper library to interface with Content Providers if you choose to store the recipes, a UI binding library to avoid writing findViewById a bunch of times, or something similar.
+- [x] It is noteworthy to first input some data into the app and export to a csv file in order to know the order in which data is arranged and populated in the csv; this will enable users to know how to populate the csv for future import into the app.
 
 ### Homescreen Widget
 - [x] Application has a companion homescreen widget.
-- [x] Widget displays ingredient list for desired recipe.
+- [x] Widget displays Stock category list.
+- [x] Stock category features the total summary of stocks (In-store, Purchases and Sales).
