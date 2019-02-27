@@ -7,6 +7,12 @@ Inventory and Stock Account Manager App is the final project of Udacity [Android
 * Firebase Authentication
 * Google Admob (Banner Ads and Interstitial Ads)
 
+## Library
+* OpenCSV for generating csv file for backing up of data and restoration of data from csv.
+* Firebase Authentication
+* Google Admob (Banner Ads and Interstitial Ads)
+
+
 ## Screenshots
 ![Phone](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-29-40.png)
 ![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-29-15.png)
