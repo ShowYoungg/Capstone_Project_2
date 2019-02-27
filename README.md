@@ -7,6 +7,21 @@ Inventory and Stock Account Manager App is the final project of Udacity [Android
 * Firebase Authentication
 * Google Admob (Banner Ads and Interstitial Ads)
 
+## Screenshots
+![Phone](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-29-40.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-29-15.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-19-12.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-19-45.png)
+![Phone](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-19-51.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-20-03.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-20-12.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-20-45.png)
+![Phone](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-21-07.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-21-25.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-21-44.png)
+![Screen](https://github.com/ShowYoungg/Capstone_Project_2/blob/master/Screenshot_2019-02-08-07-23-58.png)
+
+
 ## Project Overview
 I did productionize an app, taking it from application planning stage to a production-ready state. This involves full responsibility of development lifecycle like thinking of an app idea, drawing the whiteboard, designing and developement, adding accessibility features, allowing for localization, adding a widget, and adding a library.
 
