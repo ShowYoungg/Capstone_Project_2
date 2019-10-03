@@ -62,5 +62,5 @@ This app ensures:
 ### Homescreen Widget
 - [x] Application has a companion homescreen widget.
 - [x] Widget displays Stock category list.
-- [x] Stock category features the total summary of stocks (In-store, Purchases and Sombo.inventorymanagement)
+- [x] Stock category features the total summary of stocks (In-store, Purchases and Sales)
 
